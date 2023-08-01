@@ -1,0 +1,8 @@
+.fundoCadastro {
+    background-image: url(../../assets/minas.jpg);
+      background-repeat: no-repeat;
+      width: 100%;
+      min-height: 50vh;
+      background-size: cover;
+      background-position: center;
+  }
