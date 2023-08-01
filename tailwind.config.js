@@ -9,7 +9,8 @@ module.exports = {
       colors:{
         purple:{
           100:'#6D5A73',
-          200:'#9A86B3'
+          200:'#9A86B3',
+          300: '#703C6E'
         },
         green:{
           100:'#B3C79D'
