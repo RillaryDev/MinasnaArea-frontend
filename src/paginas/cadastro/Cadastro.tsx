@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Usuario from '../../models/Usuario'
-import { cadastrarUsuario } from '../../services/Service'
+import { cadastrarUsuario } from '../../service/Service'
 import './Cadastro.css'
 
 function Cadastro() {
@@ -69,7 +69,7 @@ function Cadastro() {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold bg-purple-200">
+      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold">
         <div className="fundoCadastro hidden lg:block"></div>
         <form className='flex justify-center items-center flex-col w-2/3 gap-3' onSubmit={cadastrarNovoUsuario}>
           <h2 className='text-slate-900 text-5xl'>Cadastrar</h2>
