@@ -9,8 +9,11 @@ import Home from './paginas/home/Home';
 import { AuthProvider } from './contexts/AuthContext';
 import ListaTemas from './components/temas/listaTemas/ListaTemas';
 import FormularioTema from './components/temas/formularioTema/FormularioTema';
+<<<<<<< HEAD
 import Cadastro from './paginas/cadastro/Cadastro';
 
+=======
+>>>>>>> d418f3c7a63e4ebc18ff6165f7be6bb8bfaf2ef7
 
 
 function App() {
