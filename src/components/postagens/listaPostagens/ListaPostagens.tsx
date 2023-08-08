@@ -23,7 +23,7 @@ function ListaPostagens() {
 
   async function buscarPostagens() {
     try {
-      await buscar('/postagens', setPostagens, {
+      await buscar('/postagem', setPostagens, {
         headers: {
           Authorization: token,
         },
