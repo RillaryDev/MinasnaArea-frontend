@@ -1,5 +1,5 @@
 import React from 'react';
-import homeLogo from '../../assets/minas.jpg'
+import homeLogo from '../../assets/mulheres.png'
 import './Home.css';
 import ListaPostagens from '../../components/postagens/listaPostagens/ListaPostagens';
 import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
