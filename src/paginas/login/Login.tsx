@@ -16,6 +16,8 @@ function Login() {
 
   const { usuario, handleLogin } = useContext(AuthContext);
 
+
+
   const {isLoading} = useContext(AuthContext) 
 
   useEffect(() => {
@@ -64,6 +66,8 @@ function login(e: ChangeEvent<HTMLFormElement>) {
               value={usuarioLogin.senha} 
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
+
+           
           </div>
           <button  type='submit' className="rounded bg-indigo-400 hover:bg-indigo-900 text-white w-1/2 py-2 flex justify-center">
            {isLoading ? <RotatingLines
