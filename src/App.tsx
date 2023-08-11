@@ -3,13 +3,14 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 import 'react-toastify/dist/ReactToastify.css';
+
 import Login from './paginas/login/Login';
+import Navbar from './components/navBar/NavBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './paginas/home/Home';
 import { AuthProvider } from './contexts/AuthContext';
 import { ToastContainer } from 'react-toastify';
 import Cadastro from './paginas/cadastro/Cadastro';
-import Navbar from './components/navBar/NavBar';
-import Home from './paginas/home/Home';
 import Footer from './components/footer/Footer';
 import ListaTemas from './components/temas/listaTemas/ListaTemas';
 import FormularioTema from './components/temas/formularioTema/FormularioTema';
@@ -30,7 +31,7 @@ function App() {
         <Navbar />
           <div className='min-h-[80vh]'>
             <Routes>
-              <Route path="/" element={<Login />} />
+              <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/home" element={<Home />} />
