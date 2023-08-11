@@ -16,7 +16,8 @@ function Cadastro() {
     nome: '',
     usuario: '',
     senha: '',
-    foto: ''
+    foto: '',
+    tipo: ''
   })
 
   const [usuarioResposta, setUsuarioResposta] = useState<Usuario>({
@@ -24,7 +25,8 @@ function Cadastro() {
     nome: '',
     usuario: '',
     senha: '',
-    foto: ''
+    foto: '',
+    tipo: ''
   })
 
   useEffect(() => {
@@ -46,6 +48,13 @@ function Cadastro() {
       ...usuario,
       [e.target.name]: e.target.value
     })
+  }
+
+  function atualizarEstadoTipo(campo: string, valor: any) {
+    setUsuario({
+      ...usuario,
+      [campo]: valor
+    });
   }
 
   async function cadastrarNovoUsuario(e: ChangeEvent<HTMLFormElement>) {
@@ -98,6 +107,21 @@ function Cadastro() {
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
+
+          <div className="flex flex-col w-full">
+              <label htmlFor="tipo">Tipo de Usuário</label>
+              <select
+                id="tipo"
+                name="tipo"
+                className="border-2 border-slate-700 rounded p-2"
+                value={usuario.tipo}
+                onChange={(e: ChangeEvent<HTMLSelectElement>) => setUsuario({ ...usuario, tipo: e.target.value })}
+                >
+                <option value=" ">Usuario</option>
+                <option value="mentor">Mentor</option>
+              </select>
+           </div>
+
           <div className="flex flex-col w-full">
             <label htmlFor="foto">Foto</label>
             <input

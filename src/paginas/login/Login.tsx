@@ -13,6 +13,7 @@ function Login() {
   );
 
   const { usuario, handleLogin } = useContext(AuthContext);
+  const userTipo = usuario.tipo === 'mentor';
 
   const { isLoading } = useContext(AuthContext)
 
@@ -87,7 +88,7 @@ function Login() {
                   </div>
                 </div>
 
-
+              {userTipo ? (
                 <div className="flex w-full">
                   <button type="submit" className=" flex justify-center py-2 px-4  bg-purple-600 hover:bg-green-100 focus:ring-green-100 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-gray-200 font-title  shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
                     {isLoading ? <RotatingLines
@@ -100,7 +101,20 @@ function Login() {
                       <span>Entrar</span>}
                   </button>
                 </div>
-
+                ) : (
+                  <div className="flex w-full">
+                  <button type="submit" className=" flex justify-center py-2 px-4  bg-purple-600 hover:bg-green-100 focus:ring-green-100 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-gray-200 font-title  shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                    {isLoading ? <RotatingLines
+                      strokeColor="white"
+                      strokeWidth="5"
+                      animationDuration="0.75"
+                      width="24"
+                      visible={true}
+                    /> :
+                      <span>Entrar</span>}
+                  </button>
+                  </div>
+                  )}
 
                 <div className="flex items-center justify-center mt-6">
                   <span className="text-lg font-title ">
