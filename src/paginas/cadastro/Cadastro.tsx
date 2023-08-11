@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import Usuario from '../../models/Usuario'
 import { cadastrarUsuario } from '../../service/Service'
 import './Cadastro.css'
+import { toastAlerta } from '../../util/toastAlerta'
 
 function Cadastro() {
 
@@ -15,7 +16,8 @@ function Cadastro() {
     nome: '',
     usuario: '',
     senha: '',
-    foto: ''
+    foto: '',
+    tipo: ''
   })
 
   const [usuarioResposta, setUsuarioResposta] = useState<Usuario>({
@@ -23,7 +25,8 @@ function Cadastro() {
     nome: '',
     usuario: '',
     senha: '',
-    foto: ''
+    foto: '',
+    tipo: ''
   })
 
   useEffect(() => {
@@ -47,6 +50,13 @@ function Cadastro() {
     })
   }
 
+  function atualizarEstadoTipo(campo: string, valor: any) {
+    setUsuario({
+      ...usuario,
+      [campo]: valor
+    });
+  }
+
   async function cadastrarNovoUsuario(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault()
 
@@ -54,14 +64,14 @@ function Cadastro() {
 
       try {
         await cadastrarUsuario(`/usuarios/cadastrar`, usuario, setUsuarioResposta)
-        alert('Usuário cadastrado com sucesso')
+        toastAlerta('Usuário cadastrado com sucesso', 'sucesso')
 
       } catch (error) {
-        alert('Erro ao cadastrar o Usuário')
+        toastAlerta('Dados inconsistentes', 'sucesso')
       }
 
     } else {
-      alert('Dados inconsistentes. Verifique as informações de cadastro.')
+      toastAlerta('Dados inconsistentes. Verifique as informações de cadastro.', 'erro')
       setUsuario({ ...usuario, senha: "" }) // Reinicia o campo de Senha
       setConfirmaSenha("")                  // Reinicia o campo de Confirmar Senha
     }
@@ -69,7 +79,7 @@ function Cadastro() {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold bg-purple-200">
+      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold">
         <div className="fundoCadastro hidden lg:block"></div>
         <form className='flex justify-center items-center flex-col w-2/3 gap-3' onSubmit={cadastrarNovoUsuario}>
           <h2 className='text-slate-900 text-5xl'>Cadastrar</h2>
@@ -97,6 +107,21 @@ function Cadastro() {
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
+
+          <div className="flex flex-col w-full">
+              <label htmlFor="tipo">Tipo de Usuário</label>
+              <select
+                id="tipo"
+                name="tipo"
+                className="border-2 border-slate-700 rounded p-2"
+                value={usuario.tipo}
+                onChange={(e: ChangeEvent<HTMLSelectElement>) => setUsuario({ ...usuario, tipo: e.target.value })}
+                >
+                <option value=" ">Usuario</option>
+                <option value="mentor">Mentor</option>
+              </select>
+           </div>
+
           <div className="flex flex-col w-full">
             <label htmlFor="foto">Foto</label>
             <input
