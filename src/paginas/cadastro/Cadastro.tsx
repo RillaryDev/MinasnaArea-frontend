@@ -50,12 +50,6 @@ function Cadastro() {
     })
   }
 
-  function atualizarEstadoTipo(campo: string, valor: any) {
-    setUsuario({
-      ...usuario,
-      [campo]: valor
-    });
-  }
 
   async function cadastrarNovoUsuario(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault()
