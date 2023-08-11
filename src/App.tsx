@@ -1,31 +1,37 @@
-import React from 'react';
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
 import './App.css';
+import 'react-toastify/dist/ReactToastify.css';
 
-import Navbar from './components/navBar/NavBar';
-import Footer from './components/footer/Footer';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './paginas/login/Login';
-import Cadastro from './paginas/cadastro/Cadastro';
+import Navbar from './components/navBar/NavBar';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './paginas/home/Home';
 import { AuthProvider } from './contexts/AuthContext';
+import { ToastContainer } from 'react-toastify';
+import Cadastro from './paginas/cadastro/Cadastro';
+import Footer from './components/footer/Footer';
 import ListaTemas from './components/temas/listaTemas/ListaTemas';
 import FormularioTema from './components/temas/formularioTema/FormularioTema';
 import DeletarTema from './components/temas/deletarTema/DeletarTema';
 import ListaPostagens from './components/postagens/listaPostagens/ListaPostagens';
 import FormularioPostagem from './components/postagens/formularioPostagem/FormularioPostagem';
-import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
-import Perfil from './paginas/perfil/Perfil';
 
+import Perfil from './paginas/perfil/Perfil';
+import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
 
 function App() {
+  
   return (
     <>
-    <AuthProvider>
+      <AuthProvider>
+      <ToastContainer />
         <BrowserRouter>
-          <Navbar />
+        <Navbar />
           <div className='min-h-[80vh]'>
             <Routes>
-              <Route path="/" element={<Login />} />
+              <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/home" element={<Home />} />
@@ -42,8 +48,9 @@ function App() {
           </div>
           <Footer />
         </BrowserRouter>
-        </AuthProvider>
+      </AuthProvider>
     </>
   );
 }
+
 export default App;

@@ -1,6 +1,7 @@
 
-import homeLogo from '../../assets/minas.jpg'
 
+
+import './Home.css';
 import ListaPostagens from '../../components/postagens/listaPostagens/ListaPostagens';
 import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
 
@@ -22,8 +23,8 @@ function Home() {
             </div>
   
             <div className="flex justify-center ">
-              <img src={homeLogo} alt="" className='w-2/3' />
-      
+              <img src="" alt="" />
+       
             </div>
           </div>
         </div>
