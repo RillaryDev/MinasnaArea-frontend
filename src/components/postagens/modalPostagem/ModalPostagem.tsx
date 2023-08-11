@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 86e75324426e8017ad49c5a86dcdd638b8ca2709
 import FormularioPostagem from '../formularioPostagem/FormularioPostagem';
 import 'reactjs-popup/dist/index.css';
 import Popup from 'reactjs-popup';

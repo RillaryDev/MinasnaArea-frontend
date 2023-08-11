@@ -50,6 +50,10 @@ function Cadastro() {
     })
   }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 86e75324426e8017ad49c5a86dcdd638b8ca2709
   async function cadastrarNovoUsuario(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault()
 
