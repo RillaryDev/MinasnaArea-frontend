@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useEffect, useState } from 'react'
+import { ChangeEvent, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Usuario from '../../models/Usuario'
 import { cadastrarUsuario } from '../../service/Service'
@@ -50,12 +50,6 @@ function Cadastro() {
     })
   }
 
-  function atualizarEstadoTipo(campo: string, valor: any) {
-    setUsuario({
-      ...usuario,
-      [campo]: valor
-    });
-  }
 
   async function cadastrarNovoUsuario(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault()

@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useContext, useEffect, useState } from 'react';
+import { ChangeEvent, useContext, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Postagem from '../../../models/Postagem';
@@ -25,6 +25,7 @@ function FormularioPostagem() {
   const [postagem, setPostagem] = useState<Postagem>({
     id: 0,
     titulo: '',
+    foto:'',
     texto: '',
     data: '',
     tema: null,

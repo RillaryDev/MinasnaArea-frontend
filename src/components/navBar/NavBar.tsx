@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { AuthContext } from '../../contexts/AuthContext'
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
@@ -17,16 +17,11 @@ function classNames(...classes: string[]) {
 
 
 function Navbar() {
-  let navigate = useNavigate();
-  const { usuario, handleLogout } = useContext(AuthContext);
+
+  
+  const { usuario  } = useContext(AuthContext);
   const userTipo = usuario.tipo === 'mentor';
 
-
-  function logout() {
-    handleLogout()
-    alert('Usuário deslogado com sucesso')
-    navigate('/login')
-  }
 
   let navbarComponent
 
@@ -155,7 +150,7 @@ function Navbar() {
                       />
                     </Menu.Button>
                   </div>
-
+    
                   <Transition
                     as={Fragment}
                     enter="transition ease-out duration-100"
