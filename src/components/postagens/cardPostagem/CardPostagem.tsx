@@ -1,7 +1,4 @@
-
-
 import  { useContext} from 'react'
-
 import { Link } from 'react-router-dom'
 import Postagem from '../../../models/Postagem'
 import { AuthContext } from '../../../contexts/AuthContext';

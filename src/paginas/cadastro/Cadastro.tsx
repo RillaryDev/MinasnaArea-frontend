@@ -50,7 +50,6 @@ function Cadastro() {
     })
   }
 
-
   async function cadastrarNovoUsuario(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault()
 
