@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 86e75324426e8017ad49c5a86dcdd638b8ca2709
 import './Home.css';
 import ListaPostagens from '../../components/postagens/listaPostagens/ListaPostagens';
 import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';

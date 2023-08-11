@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import  { ChangeEvent, useContext, useEffect, useState } from 'react';
-=======
-import { ChangeEvent, useContext, useEffect, useState } from 'react';
->>>>>>> 86e75324426e8017ad49c5a86dcdd638b8ca2709
 import { useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Postagem from '../../../models/Postagem';

@@ -1,9 +1,9 @@
 import { useContext } from 'react'
-<<<<<<< HEAD
+
 import { Link, useNavigate } from 'react-router-dom'
-=======
-import { Link } from 'react-router-dom'
->>>>>>> 86e75324426e8017ad49c5a86dcdd638b8ca2709
+import { toastAlerta } from '../../util/toastAlerta'
+
+
 import { AuthContext } from '../../contexts/AuthContext'
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
@@ -21,10 +21,16 @@ function classNames(...classes: string[]) {
 
 
 function Navbar() {
-
+  let navigate = useNavigate()
   
-  const { usuario  } = useContext(AuthContext);
+  const { usuario, handleLogout  } = useContext(AuthContext);
   const userTipo = usuario.tipo === 'mentor';
+
+  function logout() {
+    handleLogout()
+    toastAlerta('Usuário deslogado com sucesso', 'info')
+    navigate('/login')
+}
 
 
   let navbarComponent
