@@ -1,9 +1,5 @@
-import { useContext } from 'react'
-
+import React, { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { toastAlerta } from '../../util/toastAlerta'
-
-
 import { AuthContext } from '../../contexts/AuthContext'
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
@@ -21,17 +17,16 @@ function classNames(...classes: string[]) {
 
 
 function Navbar() {
-  let navigate = useNavigate()
-  
-  const { usuario, handleLogout  } = useContext(AuthContext);
+  let navigate = useNavigate();
+  const { usuario, handleLogout } = useContext(AuthContext);
   const userTipo = usuario.tipo === 'mentor';
+
 
   function logout() {
     handleLogout()
-    toastAlerta('Usuário deslogado com sucesso', 'info')
+    alert('Usuário deslogado com sucesso')
     navigate('/login')
-}
-
+  }
 
   let navbarComponent
 
@@ -59,10 +54,9 @@ function Navbar() {
 
 
                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-
                   <div className="flex flex-shrink-0 items-center">
                     <img
-                      className="h-8 w-auto"
+                      className="h-14 w-auto"
                       src="https://i.imgur.com/OAY8uOO.png"
                       alt="Logo Minas na Area"
                     />
@@ -84,7 +78,7 @@ function Navbar() {
 
                         <div className="hidden sm:ml-6 sm:block">
                           <div className="flex space-x-4">
-                            <Link to='/home' className='text-2xl text-white-100 font-title'>Minas na Área</Link>
+                            <Link to='/home' className='text-3xl text-white-100 font-title'>Minas na Área</Link>
                           </div>
                         </div>
 
@@ -101,9 +95,6 @@ function Navbar() {
                                 <div className="hover:bg-purple-400 text-white-100 text-lg mb-2 ">
                                   <Link className="block rounded-md px-4 font-title" to='/home'>Contato</Link>
                                 </div>
-                                <div className="hover:bg-purple-400 text-white-100 text-lg mb-2 ">
-                                  <Link className="block rounded-md px-4 font-title" to='' onClick={logout} >Sair</Link>
-                                </div>
                               </Disclosure.Button>
                             </div>
                           </Disclosure.Panel>
@@ -117,14 +108,12 @@ function Navbar() {
                               <button className='rounded-nav w-20 transition ease-in-out bg-purple-600  hover:scale-110 hover:bg-pink-200  duration-300 '><Link to='/home'>Home</Link> </button>
                               <button className='rounded-nav w-28 transition ease-in-out bg-purple-600  hover:scale-110 hover:bg-pink-200 duration-300 '><Link to='/postagens'>Agendamento</Link> </button>
                               <button className='rounded-nav w-20 transition ease-in-out bg-purple-600  hover:scale-110 hover:bg-pink-200  duration-300 '><Link to='/login'>Contato</Link></button>
-                              <button className='rounded-nav w-20 transition ease-in-out bg-purple-600  hover:scale-110 hover:bg-pink-200  duration-300 '><Link to='' onClick={logout} >Sair</Link></button>
-                           
                             </div>
                           </div>
                         </div>
-                        <div className="hidden sm:ml-6 sm:block">
+                        <div className="hidden sm:ml-4 sm:block">
                           <div className="flex space-x-4">
-                            <Link to='/home' className='text-2xl text-white-100 font-title'>Minas na Área</Link>
+                            <Link to='/home' className='text-3xl text-white-100 pt-2 font-title'>Minas na Área</Link>
                           </div>
                         </div>
                         <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -140,9 +129,6 @@ function Navbar() {
                                 </div>
                                 <div className="hover:bg-purple-400 text-white-100 text-lg mb-2 ">
                                   <Link className="block rounded-md px-4 font-title" to='/home'>Contato</Link>
-                                </div>
-                                <div className="hover:bg-purple-400 text-white-100 text-lg mb-2 ">
-                                  <Link className="block rounded-md px-4 font-title" to='' onClick={logout} >Sair</Link>
                                 </div>
                               </Disclosure.Button>
                             </div>
@@ -168,7 +154,7 @@ function Navbar() {
                       />
                     </Menu.Button>
                   </div>
-    
+
                   <Transition
                     as={Fragment}
                     enter="transition ease-out duration-100"
@@ -235,7 +221,7 @@ function Navbar() {
                 </div>
                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                   <div className="flex flex-shrink-0 items-center ">
-                    <Link to='/home' className='text-2xl text-white-100 font-title'>Minas na Área</Link>
+                    <Link to='/home' className='text-3xl text-white-100 font-title'>Minas na Área</Link>
                     <img
                       className="right-96 h-14 w-auto"
                       src="https://i.imgur.com/OAY8uOO.png"
