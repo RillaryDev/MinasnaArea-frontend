@@ -23,7 +23,7 @@ function Navbar() {
   function logout() {
     handleLogout()
     toastAlerta('Usuário deslogado com sucesso', 'info')
-    navigate('/login')
+    navigate('/')
 }
 
 let navbarComponent
