@@ -319,7 +319,6 @@ function Home() {
 
                     </div>
                 </div></>
-                // voluntariar para mentoria
                 <div className="bg-pink-100 flex items-center justify-center   ">
                     <div className="relative w-full bg-green-500 border-4 border-green-700/80 mt-10 mb-10 px-6 pt-10 pb-12  shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
                         <div className=" mx-auto px-5 inset-x-0 	">
