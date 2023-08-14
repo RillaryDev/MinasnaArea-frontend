@@ -1,14 +1,12 @@
-import React, { useContext, useState } from 'react';
+import { useContext } from 'react';
 import './Home.css';
-import ListaPostagens from '../../components/postagens/listaPostagens/ListaPostagens';
 import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
 import { GlobeAltIcon, ArrowPathIcon, UserGroupIcon, ChartBarIcon } from '@heroicons/react/24/outline'
 import { Disclosure } from '@headlessui/react'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthContext';
 
 function Home() {
-    let navigate = useNavigate();
     const { usuario } = useContext(AuthContext);
     const userTipo = usuario.tipo === 'mentor';
 

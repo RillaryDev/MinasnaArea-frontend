@@ -2,7 +2,6 @@ import { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../contexts/AuthContext'
 import { toastAlerta } from '../../util/toastAlerta'
-import contatofoto from '../../assets/contatofoto.jpg';
 
 function Contato() {
   let navigate = useNavigate()
