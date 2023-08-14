@@ -47,7 +47,8 @@ module.exports = {
           100:'#E2D9D9', //cor dos textos e títulos
           200:'#7B7864', 
           300:'#FFFFFF', //branco padrão
-          400: '#EBDFCB' //off-white
+          400: '#EBDFCB', //off-white
+          500: '#F3F4F6'
           
         }
       },

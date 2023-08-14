@@ -74,103 +74,110 @@ function Cadastro() {
 
   return (
     <>
-      
-        <div className="bg-pink-100 h-screen w-screen pt-10">
-          <div className=" bg-pink-200  border-4 border-purple-600/80 rounded-lg max-w-xl mx-auto bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-          <div className=" self-center text-center mb-6 text-2xl font-base text-gray-200 sm:text-3xl dark:text-white">
-          Cadastre-se
-            </div>
-            <form className="flex-col space-y-4 ">
-              <input
-                type="text"
-                id="nome" 
-                name="nome"
-                placeholder="Nome"
-                className=" rounded-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                value={usuario.nome}
-                onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-              />
-              <div className="flex flex-col space-y-2">
-                <input
-                  type="text"
-                  id="usuario"
-                  name="usuario"
-                  placeholder="E-mail"
-                  className=" rounded-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                  value={usuario.usuario}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                />
+      <div className="bg-pink-400 ">
+        <div className="min-h-screen bg-pink-400 text-gray-900 flex justify-center">
+          <div className="max-w-screen-1xl m-0 sm:m-10 bg-pink-100 shadow sm:rounded-lg flex justify-center flex-1">
+            <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
+              <div>
+                <img src="https://i.imgur.com/OJb60Jn.png"
+                  className="w-mx-auto" />
               </div>
-              <div className="flex flex-col space-y-2 text-gray-200">
-                <label htmlFor="nome">Tipo de Usuário</label>
-                <select
-                  id="tipo"
-                  name="tipo"
-                  placeholder="Tipo de Usuário"
-                  className=" rounded-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                  value={usuario.tipo}
-                  onChange={(e: ChangeEvent<HTMLSelectElement>) => setUsuario({ ...usuario, tipo: e.target.value })}
-                >
-                  <option value=" ">Mentorada</option>
-                  <option value="mentor">Mentora</option>
-                </select>
-              </div>
-              <div className="flex flex-col space-y-2">
-                <input
-                  type="text"
-                  id="foto"
-                  name="foto"
-                  placeholder="Coloque sua foto aqui"
-                  className=" rounded-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                  value={usuario.foto}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                />
-
-              </div>
+              <div className="mt-12 flex flex-col items-center">
+                <div className="w-full flex-1 ">
 
 
-              <div className="flex flex-col space-y-2">
-                <input
-                  type="password"
-                  id="senha"
-                  name="senha"
-                  placeholder="Senha"
-                  className=" rounded-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                  value={usuario.senha}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                />
-              </div>
-              <div className="flex flex-col space-y-2">
-                <input
-                  type="password"
-                  id="confirmarSenha"
-                  name="confirmarSenha"
-                  placeholder="Confirmar Senha"
-                  className=" rounded-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                  value={confirmaSenha}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) => handleConfirmarSenha(e)}
-                />
-              </div>
-              <div className="flex justify-end">
-                <button className="font-base text-gray-300 inline-flex items-center justify-center px-4 py-2.5 border border-transparent text-sm font-medium rounded-md shadow-sm focus:outline-none ring-2 ring-offset-2 ring-transparent ring-offset-transparent disabled:bg-gray-400 dark:disabled:bg-slate-700 appearance-none text-white bg-purple-600 hover:bg-green-400 focus:ring-green-400 focus:ring-offset-white w-full" type="submit" name="_action" value="create">
-                  <div className="relative">
-                    <div className=""> Cadastrar
-                    </div>
-                    <div className="hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
-                      </circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
-                        </path>
-                      </svg>
-                    </div>
+                  <div className=" text-center self-center mb-6 text-2xl font-base text-gray-800 sm:text-3xl dark:text-white">
+                    Cadastre-se
                   </div>
-                </button>
-              </div>
-            </form>
-          </div >
-        </div >
 
-      
+                  <div className="mx-auto max-w-xs">
+                    <input
+                      className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                      type="text"
+                      id="nome"
+                      name="nome"
+                      placeholder="Nome"
+                      value={usuario.nome}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)} />
+                    <input
+                      className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5 mb-4 "
+                      id="usuario"
+                      name="usuario"
+                      placeholder="E-mail"
+                      value={usuario.usuario}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                    />
+                  
+
+                    <label htmlFor="nome">Tipo de Usuário</label>
+                    <select
+                      className="w-full px-8 py-4 rounded-lg  font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-2"
+                      id="tipo"
+                      name="tipo"
+                      placeholder="Tipo de Usuário"
+                      value={usuario.tipo}
+                      onChange={(e: ChangeEvent<HTMLSelectElement>) => setUsuario({ ...usuario, tipo: e.target.value })}
+                    >
+                      <option value=" ">Mentorada</option>
+                      <option value="mentor">Mentora</option>
+                    </select>
+
+                    <input
+                      className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                      type="text"
+                      id="foto"
+                      name="foto"
+                      placeholder="Coloque o link da sua foto aqui"
+                      value={usuario.foto}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                    />
+                    <input
+                      type="password"
+                      id="senha"
+                      name="senha"
+                      placeholder="Senha"
+                      className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                      value={usuario.senha}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                    />
+                    <input
+                      type="password"
+                      id="confirmarSenha"
+                      name="confirmarSenha"
+                      placeholder="Confirmar Senha"
+                      className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                      value={confirmaSenha}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) => handleConfirmarSenha(e)}
+                    />
+
+                    <button
+                      className="mt-5 tracking-wide font-semibold bg-purple-600 text-white-500 w-full py-4 rounded-lg hover:bg-green-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
+                      <svg className="w-6 h-6 -ml-2" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                      </svg>
+                      <span className="mr-3 text-white-100 ">
+                        <p>Cadastrar</p>
+                      </span>
+                    </button>
+                    <p className="mt-6 text-xs text-gray-600 text-center">
+                      Eu li e concordo com os termos de uso da
+                      <a href="#" className="ml-1 border-b border-gray-500 border-dotted">
+                        Política de Privacidade
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-r-lg flex-1 bg-purple-600 text-center hidden lg:flex">
+              <img className="m-12 xl:m-12  w-[35rem] h-[50rem] bg-contain bg-center bg-no-repeat background-image" src="https://i.imgur.com/PBR25iK.jpg" alt="mentoria" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
     </>
   )
 }
