@@ -176,8 +176,7 @@ let navbarComponent
 
                     <Menu.Item>
                       {({ active }) => (
-                        <a
-                        onClick={logout}
+                        <a onClick={logout}
                           href="/login"
                           className={classNames(active ? 'bg-pink-300' : '', 'block px-4 py-2 text-base text-purple-600')}
                         >
