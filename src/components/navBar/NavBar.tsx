@@ -14,35 +14,19 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-
-
-
 function Navbar() {
-<<<<<<< HEAD
   let navigate = useNavigate()
   
   const { usuario, handleLogout  } = useContext(AuthContext);
-=======
-  let navigate = useNavigate();
-  const { usuario, handleLogout } = useContext(AuthContext);
->>>>>>> 6bd91b3795b78a7687f32f80bdcb3bfa682cc25c
   const userTipo = usuario.tipo === 'mentor';
-
-
-  function logout() {
-    handleLogout()
-    alert('Usuário deslogado com sucesso')
-    navigate('/login')
-  }
-
-  let navbarComponent
 
   function logout() {
     handleLogout()
     toastAlerta('Usuário deslogado com sucesso', 'info')
     navigate('/login')
 }
-  
+
+let navbarComponent
 
   if (usuario.token !== "") {
     navbarComponent = (
@@ -107,9 +91,7 @@ function Navbar() {
                                 <div className="hover:bg-purple-400 text-white-100 text-lg mb-2 ">
                                   <Link className="block rounded-md px-4 font-title" to='/contato'>Contato</Link>
                                 </div>
-                                <div className="hover:bg-purple-400 text-white-100 text-lg mb-2 ">
-                                  <Link className="block rounded-md px-4 font-title hover:underline" to='' onClick={logout} >Sair</Link>
-                                </div>
+                               
                               </Disclosure.Button>
                             </div>
                           </Disclosure.Panel>
@@ -121,14 +103,8 @@ function Navbar() {
                           <div className="flex flex-shrink-0 absolute inset-0 left-[800px] items-center">
                             <div className='flex gap-8 text-xl text-white-100 font-title'>
                               <button className='rounded-nav w-20 transition ease-in-out bg-purple-600  hover:scale-110 hover:bg-pink-200  duration-300 '><Link to='/home'>Home</Link> </button>
-<<<<<<< HEAD
                               <button className='rounded-nav w-28 transition ease-in-out bg-purple-600  hover:scale-110 hover:bg-pink-200 duration-300 '><Link to='/postagens'>Agendamento</Link> </button>
                               <button className='rounded-nav w-20 transition ease-in-out bg-purple-600  hover:scale-110 hover:bg-pink-200  duration-300 '><Link to='/login'>Contato</Link></button>
-                              <button className='rounded-nav w-20 transition ease-in-out bg-purple-600  hover:scale-110 hover:bg-pink-200  duration-300 '><Link to='/home'>Sair</Link></button>
-=======
-                              <button className='rounded-nav w-28 transition ease-in-out bg-purple-600  hover:scale-110 hover:bg-pink-200 duration-300 '><Link to='/mentorias'>Agendamento</Link> </button>
-                              <button className='rounded-nav w-20 transition ease-in-out bg-purple-600  hover:scale-110 hover:bg-pink-200  duration-300 '><Link to='/contato'>Contato</Link></button>
->>>>>>> 6bd91b3795b78a7687f32f80bdcb3bfa682cc25c
                             </div>
                           </div>
                         </div>
@@ -151,9 +127,7 @@ function Navbar() {
                                 <div className="hover:bg-purple-400 text-white-100 text-lg mb-2 ">
                                   <Link className="block rounded-md px-4 font-title" to='/contato'>Contato</Link>
                                 </div>
-                                <div className="hover:bg-purple-400 text-white-100 text-lg mb-2 ">
-                                  <Link className="block rounded-md px-4 font-title hover:underline" to='' onClick={logout} >Sair</Link>
-                                </div>
+                              
                               </Disclosure.Button>
                             </div>
                           </Disclosure.Panel>
@@ -203,6 +177,7 @@ function Navbar() {
                     <Menu.Item>
                       {({ active }) => (
                         <a
+                        onClick={logout}
                           href="/login"
                           className={classNames(active ? 'bg-pink-300' : '', 'block px-4 py-2 text-base text-purple-600')}
                         >

@@ -77,7 +77,9 @@ function Cadastro() {
       <div className="bg-pink-400 ">
         <div className="min-h-screen bg-pink-400 text-gray-900 flex justify-center">
           <div className="max-w-screen-1xl m-0 sm:m-10 bg-pink-100 shadow sm:rounded-lg flex justify-center flex-1">
+          
             <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
+            <form onSubmit={cadastrarNovoUsuario}>
               <div>
                 <img src="https://i.imgur.com/OJb60Jn.png"
                   className="w-mx-auto" />
@@ -168,14 +170,19 @@ function Cadastro() {
                   </div>
                 </div>
               </div>
+              </form>
             </div>
+
             <div className="rounded-r-lg flex-1 bg-purple-600 text-center hidden lg:flex">
               <img className="m-12 xl:m-12  w-[35rem] h-[50rem] bg-contain bg-center bg-no-repeat background-image" src="https://i.imgur.com/PBR25iK.jpg" alt="mentoria" />
+              
             </div>
+            
           </div>
         </div>
-
       </div>
+
+      
 
 
     </>
@@ -184,6 +191,3 @@ function Cadastro() {
 
 export default Cadastro
 
-function foto(prevState: null): null {
-  throw new Error('Function not implemented.')
-}

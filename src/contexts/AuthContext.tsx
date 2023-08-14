@@ -34,11 +34,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         setIsLoading(true)
         try {
             await login(`/usuarios/logar`, userLogin, setUsuario)
-<<<<<<< HEAD
             toastAlerta('Usuario logado com Sucesso', 'info');
-=======
-            toastAlerta('Usuário logado com sucesso', 'sucesso');
->>>>>>> 6bd91b3795b78a7687f32f80bdcb3bfa682cc25c
             setIsLoading(false)
 
         } catch (error) {
