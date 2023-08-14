@@ -229,10 +229,11 @@ function Navbar() {
                     />
                   </div>
                   <div className="hidden sm:ml-6 sm:block  ">
-                    <div className="flex flex-shrink-0 absolute inset-0 left-[900px] items-center">
+                    <div className="flex flex-shrink-0 absolute inset-0 left-[800px] items-center">
                       <div className='flex gap-8 text-xl text-white-100 font-title'>
                         <button className='rounded-nav w-20 transition ease-in-out bg-purple-600  hover:scale-110 hover:bg-pink-200  duration-300 '><Link to='/home'>Home</Link> </button>
                         <button className='rounded-nav w-20 transition ease-in-out bg-purple-600  hover:scale-110 hover:bg-pink-200 duration-300 '><Link to='/sobre'>Sobre</Link> </button>
+                        <button className='rounded-nav w-20 transition ease-in-out bg-purple-600  hover:scale-110 hover:bg-pink-200 duration-300 '><Link to='/contato'>Contato</Link> </button>
                         <button className='rounded-nav w-20 transition ease-in-out bg-purple-600  hover:scale-110 hover:bg-pink-200  duration-300 '><Link to='/login'>Entrar</Link></button>
                       </div>
                     </div>

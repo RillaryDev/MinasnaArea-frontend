@@ -475,7 +475,7 @@ function Home() {
                                     <div className='rounded-md px-24 '>
                                     <p className='mt-6 mb-2 text-gray-600 text-center'>Em caso de dúvida para mais informações: </p>
                                     <button type="button" className=" font-sm font-base py-4 px-6 text-gray-900 bg-yellow-100 hover:bg-orange-400 focus:ring-yellow-400 focus:ring-offset-yellow-500  w-full transition ease-in duration-200 text-center  shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
-                                                <a href="/home">Entre em contato com a gente.</a>
+                                                <a href="/contato">Entre em contato com a gente.</a>
                                     </button>
                                     </div>
                                 </div>

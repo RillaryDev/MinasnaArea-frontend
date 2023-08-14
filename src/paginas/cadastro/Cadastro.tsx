@@ -5,6 +5,7 @@ import { cadastrarUsuario } from '../../service/Service'
 import './Cadastro.css'
 import { toastAlerta } from '../../util/toastAlerta'
 
+
 function Cadastro() {
 
   let navigate = useNavigate()
@@ -70,99 +71,112 @@ function Cadastro() {
     }
   }
 
+
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold">
-        <div className="fundoCadastro hidden lg:block"></div>
-        <form className='flex justify-center items-center flex-col w-2/3 gap-3' onSubmit={cadastrarNovoUsuario}>
-          <h2 className='text-slate-900 text-5xl'>Cadastrar</h2>
-          <div className="flex flex-col w-full">
-            <label htmlFor="nome">Nome</label>
-            <input
-              type="text"
-              id="nome"
-              name="nome"
-              placeholder="Nome"
-              className="border-2 border-slate-700 rounded p-2"
-              value={usuario.nome} 
-              onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-            />
-          </div>
-          <div className="flex flex-col w-full">
-            <label htmlFor="usuario">Usuario</label>
-            <input
-              type="text"
-              id="usuario"
-              name="usuario"
-              placeholder="Usuario"
-              className="border-2 border-slate-700 rounded p-2"
-              value={usuario.usuario} 
-              onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-            />
-          </div>
-
-          <div className="flex flex-col w-full">
-              <label htmlFor="tipo">Tipo de Usuário</label>
-              <select
-                id="tipo"
-                name="tipo"
-                className="border-2 border-slate-700 rounded p-2"
-                value={usuario.tipo}
-                onChange={(e: ChangeEvent<HTMLSelectElement>) => setUsuario({ ...usuario, tipo: e.target.value })}
+      
+        <div className="bg-pink-100 h-screen w-screen pt-10">
+          <div className=" bg-pink-200  border-4 border-purple-600/80 rounded-lg max-w-xl mx-auto bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+          <div className=" self-center text-center mb-6 text-2xl font-base text-gray-200 sm:text-3xl dark:text-white">
+          Cadastre-se
+            </div>
+            <form className="flex-col space-y-4 ">
+              <input
+                type="text"
+                id="nome" 
+                name="nome"
+                placeholder="Nome"
+                className=" rounded-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                value={usuario.nome}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+              />
+              <div className="flex flex-col space-y-2">
+                <input
+                  type="text"
+                  id="usuario"
+                  name="usuario"
+                  placeholder="E-mail"
+                  className=" rounded-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  value={usuario.usuario}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                />
+              </div>
+              <div className="flex flex-col space-y-2 text-gray-200">
+                <label htmlFor="nome">Tipo de Usuário</label>
+                <select
+                  id="tipo"
+                  name="tipo"
+                  placeholder="Tipo de Usuário"
+                  className=" rounded-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  value={usuario.tipo}
+                  onChange={(e: ChangeEvent<HTMLSelectElement>) => setUsuario({ ...usuario, tipo: e.target.value })}
                 >
-                <option value=" ">Usuario</option>
-                <option value="mentor">Mentor</option>
-              </select>
-           </div>
+                  <option value=" ">Mentorada</option>
+                  <option value="mentor">Mentora</option>
+                </select>
+              </div>
+              <div className="flex flex-col space-y-2">
+                <input
+                  type="text"
+                  id="foto"
+                  name="foto"
+                  placeholder="Coloque sua foto aqui"
+                  className=" rounded-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  value={usuario.foto}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                />
 
-          <div className="flex flex-col w-full">
-            <label htmlFor="foto">Foto</label>
-            <input
-              type="text"
-              id="foto"
-              name="foto"
-              placeholder="Foto"
-              className="border-2 border-slate-700 rounded p-2"
-              value={usuario.foto} 
-              onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-            />
-          </div>
-          <div className="flex flex-col w-full">
-            <label htmlFor="senha">Senha</label>
-            <input
-              type="password"
-              id="senha"
-              name="senha"
-              placeholder="Senha"
-              className="border-2 border-slate-700 rounded p-2"
-              value={usuario.senha} 
-              onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-            />
-          </div>
-          <div className="flex flex-col w-full">
-            <label htmlFor="confirmarSenha">Confirmar Senha</label>
-            <input
-              type="password"
-              id="confirmarSenha"
-              name="confirmarSenha"
-              placeholder="Confirmar Senha"
-              className="border-2 border-slate-700 rounded p-2"
-              value={confirmaSenha}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => handleConfirmarSenha(e)}
-            />
-          </div>
-          <div className="flex justify-around w-full gap-8">
-            <button className='rounded text-white bg-red-400 hover:bg-red-700 w-1/2 py-2' onClick={back}>
-              Cancelar
-            </button>
-            <button className='rounded text-white bg-indigo-400 hover:bg-indigo-900 w-1/2 py-2' type='submit'>
-              Cadastrar
-            </button>
-          </div>
-        </form>
-      </div>
+              </div>
+
+
+              <div className="flex flex-col space-y-2">
+                <input
+                  type="password"
+                  id="senha"
+                  name="senha"
+                  placeholder="Senha"
+                  className=" rounded-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  value={usuario.senha}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                />
+              </div>
+              <div className="flex flex-col space-y-2">
+                <input
+                  type="password"
+                  id="confirmarSenha"
+                  name="confirmarSenha"
+                  placeholder="Confirmar Senha"
+                  className=" rounded-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  value={confirmaSenha}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => handleConfirmarSenha(e)}
+                />
+              </div>
+              <div className="flex justify-end">
+                <button className="font-base text-gray-300 inline-flex items-center justify-center px-4 py-2.5 border border-transparent text-sm font-medium rounded-md shadow-sm focus:outline-none ring-2 ring-offset-2 ring-transparent ring-offset-transparent disabled:bg-gray-400 dark:disabled:bg-slate-700 appearance-none text-white bg-purple-600 hover:bg-green-400 focus:ring-green-400 focus:ring-offset-white w-full" type="submit" name="_action" value="create">
+                  <div className="relative">
+                    <div className=""> Cadastrar
+                    </div>
+                    <div className="hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                      <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                      </circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </form>
+          </div >
+        </div >
+
+      
     </>
   )
 }
 
 export default Cadastro
+
+function foto(prevState: null): null {
+  throw new Error('Function not implemented.')
+}

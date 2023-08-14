@@ -10,7 +10,7 @@ function Footer() {
 
   return (
     <>
-        <div className="flex justify-center bg-purple-600 text-white">
+        <div className="flex justify-center bg-purple-600 font-base text-white">
           <div className="container flex flex-col items-center py-4">
             <p className='text-xl font-title text-white-100'>Minas na Área | Copyright: </p>
             <p className='text-lg font-title text-white-100'>Acesse nossas redes sociais</p>
