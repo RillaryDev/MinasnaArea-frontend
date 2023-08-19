@@ -30,7 +30,7 @@ function CardTemas({tema}: CardTemaProps) {
         :
         <div>
        <Link to={`/deletarTema/${tema.id}`} className='text-slate-100 bg-red-400 hover:bg-red-700 w-full flex items-center justify-center'>
-        <button>agendar</button>
+        <button>Agendar</button>
         
       </Link>
       </div> }

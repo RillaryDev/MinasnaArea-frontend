@@ -66,7 +66,7 @@ function Home() {
 
                                     <div className="mt-12 inline-flex rounded-md shadow">
                                         <Link to="/mentorias" className="font-sm py-4 px-16 text-white-100  bg-pink-500 hover:bg-green-400 focus:ring-green-300 focus:ring-offset-green-300 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
-                                            Criar uma Mentoria </Link>
+                                            Visualizar mentorias</Link>
                                     </div>
                                 </div>
                             </section>
@@ -109,9 +109,9 @@ function Home() {
     } else {
         homeComponent = (
             <><><div className="bg-pink-200 ">
-                <div className="bg-pink-100 dark:bg-gray-800 overflow-hidden relative">
+                <div className="bg-pink-100 overflow-hidden relative">
                     <div className="text-start w-1/2 py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
-                        <h1 className="text-3xl font-base font-extrabold text-black dark:text-white sm:text-4xl">
+                        <h1 className="text-3xl font-base font-extrabold text-black sm:text-4xl">
                             <span className="block">
                                 Descubra o Poder da Mentoria:     </span>
                             <span className="block text-green-400">
@@ -203,8 +203,8 @@ function Home() {
                 {/* avalicações */}
 
                 <div className=" flex flex-col items-center w-full gap-4 p-8 mb-8 md:flex-row md:mb-0 flex-between">
-                    <div className="transition-transform transform hover:scale-110 bg-white-400 dark:bg-gray-800 w-72 shadow-lg mx-auto rounded-xl p-4">
-                        <p className="text-gray-600 dark:text-white">
+                    <div className="transition-transform transform hover:scale-110 bg-white-400 w-72 shadow-lg mx-auto rounded-xl p-4">
+                        <p className="text-gray-600">
                             <span className="text-lg font-bold text-green-100">
                                 “
                             </span>
@@ -221,15 +221,15 @@ function Home() {
                             <div className="flex flex-col justify-between ml-2">
                                 <span className="text-md font-semibold text-green-100">
                                     Leandra Andrade                   </span>
-                                <span className="flex items-center text-xs dark:text-gray-400">
+                                <span className="flex items-center text-xs">
                                     Mentorada
                                     <img src="https://i.imgur.com/OAY8uOO.png" className="w-6 h-6 ml-2" />
                                 </span>
                             </div>
                         </div>
                     </div>
-                    <div className="transition-transform transform hover:scale-110 bg-white-400  dark:bg-gray-800 w-72 shadow-lg mx-auto rounded-xl p-4">
-                        <p className="text-gray-600 dark:text-white">
+                    <div className="transition-transform transform hover:scale-110 bg-white-400  w-72 shadow-lg mx-auto rounded-xl p-4">
+                        <p className="text-gray-600 ">
                             <span className="text-lg font-bold text-green-100">
                                 “
                             </span>
@@ -247,15 +247,15 @@ function Home() {
                                 <span className="text-md font-semibold text-green-100">
                                     Katia Hassani
                                 </span>
-                                <span className="flex items-center text-xs dark:text-gray-400">
+                                <span className="flex items-center text-xs">
                                     Mentorada
                                     <img src="https://i.imgur.com/OAY8uOO.png" className="w-6 h-6 ml-2" />
                                 </span>
                             </div>
                         </div>
                     </div>
-                    <div className="transition-transform transform hover:scale-110 bg-white-400 dark:bg-gray-800 w-72 shadow-lg mx-auto rounded-xl p-4">
-                        <p className="text-gray-600 dark:text-white">
+                    <div className="transition-transform transform hover:scale-110 bg-white-400 w-72 shadow-lg mx-auto rounded-xl p-4">
+                        <p className="text-gray-600 ">
                             <span className="text-lg font-bold text-green-100">
                                 “
                             </span>
@@ -273,7 +273,7 @@ function Home() {
                                 <span className="text-md font-semibold text-green-100">
                                     Marcela Apolinária
                                 </span>
-                                <span className="flex items-center text-xs dark:text-gray-400">
+                                <span className="flex items-center text-xs ">
                                     Mentorada
                                     <img src="https://i.imgur.com/OAY8uOO.png" className="w-6 h-6 ml-2" />
                                 </span>
@@ -310,8 +310,8 @@ function Home() {
                                 ))}
                             </dl>
 
-                            <button className="relative inline-flex items-center justify-center mt-12 p-0.5 mb-2 mr-2 left-[19rem] overflow-hidden text-sm font-lg text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
-                                <span className="relative px-12 py-2.5 transition-all ease-in duration-75 font-base bg-pink-400 dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                            <button className="relative inline-flex items-center justify-center mt-12 p-0.5 mb-2 mr-2 left-[19rem] overflow-hidden text-sm font-lg text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 ">
+                                <span className="relative px-12 py-2.5 transition-all ease-in duration-75 font-base bg-pink-400 rounded-md group-hover:bg-opacity-0">
                                     <a href="/cadastro">SE TORNE UMA MENTORA! </a>
                                 </span>
                             </button>

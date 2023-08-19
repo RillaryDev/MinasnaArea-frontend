@@ -45,8 +45,8 @@ function Login() {
             src="https://i.imgur.com/o6qVaqD.png" alt="Minas"
             className="max-w-full h-auto md:w-2/3 md:ml-08 md:mt-0 mt-8  mr-24 "
           />
-          <div className=" md:w-1/2 md:mr-12 bg-pink-400 flex flex-col w-full max-w-md px-4 py-12 bg-white border-4 border-purple-600/80 rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10">
-            <div className=" self-center mb-6 text-2xl font-base text-gray-800 sm:text-3xl dark:text-white">
+          <div className=" md:w-1/2 md:mr-12 bg-pink-400 flex flex-col w-full max-w-md px-4 py-12 bg-white border-4 border-purple-600/80 rounded-lg shadow sm:px-6 md:px-8 lg:px-10">
+            <div className=" self-center mb-6 text-2xl font-base text-gray-800 sm:text-3xl">
               Entre Na Sua Conta
             </div>
             <div className="mt-8">
@@ -120,7 +120,7 @@ function Login() {
                   <span className="text-lg font-base ">
                     <p>Ainda não tem uma conta?{' '}
 
-                    <Link to="/cadastro" className=" font-semibold inline-flex items-center text-center text-purple-600 hover:text-green-400 dark:text-green-400 dark:hover:text-white">
+                    <Link to="/cadastro" className=" font-semibold inline-flex items-center text-center text-purple-600 hover:text-green-400">
 
                         Cadastre-se
 
