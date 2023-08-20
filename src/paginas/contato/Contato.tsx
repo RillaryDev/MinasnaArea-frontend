@@ -32,11 +32,11 @@ function Contato() {
             </div>
             <div>
               <label htmlFor="subject" className=" block mb-2 text-sm font-medium font-bold text-gray-900">Assunto</label>
-              <input type="text" id="subject" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" placeholder="Deixe-nos saber como podemos te ajudar" required />
+              <input type="text" id="subject" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" placeholder="Deixe-nos saber com o que podemos te ajudar" required />
             </div>
             <div className="sm:col-span-2">
               <label htmlFor="message" className="block mb-2 text-sm font-medium font-bold text-gray-900">Sua mensagem</label>
-              <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500" placeholder="Leave a comment..."></textarea>
+              <textarea id="message" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500" placeholder="Deixe seu comentário"></textarea>
             </div>
             <div className='flex flex-col justify-center items-center'>
               <button type="submit" className="border border-gray-900 bg-purple-600 py-3 px-5 text-sm font-base text-center text-gray-300 rounded-lg bg-primary-700 sm:w-fit hover:bg-green-400 hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-primary-300">Enviar mensagem</button>
