@@ -7,7 +7,7 @@ function Perfil() {
   let navigate = useNavigate()
 
   const { usuario } = useContext(AuthContext)
-  const userTipo = usuario.tipo === 'mentor';
+  const userTipo = usuario.tipo === 'mentora';
 
   useEffect(() => {
     if (usuario.token === "") {
