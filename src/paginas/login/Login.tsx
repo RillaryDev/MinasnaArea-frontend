@@ -13,7 +13,7 @@ function Login() {
   );
 
   const { usuario, handleLogin } = useContext(AuthContext);
-  const userTipo = usuario.tipo === 'mentor';
+  const userTipo = usuario.tipo === 'mentora';
 
   const { isLoading } = useContext(AuthContext)
 
